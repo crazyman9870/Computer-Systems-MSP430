@@ -1,0 +1,734 @@
+******************************************************************************
+                  MSP430 Linker PC v4.2.1                      
+******************************************************************************
+>> Linked Tue Mar 31 11:12:31 2015
+
+OUTPUT FILE NAME:   <Life.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000ad98
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000400  000003aa  00000056  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 00008000   00007fde  00002eae  00005130  RWIX
+  INT00                 0000ffe0   00000002  00000000  00000002  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000002  00000000  RWIX
+  INT03                 0000ffe6   00000002  00000002  00000000  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000000  00000002  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.cinit     0    00008000    00000000     UNINITIALIZED
+
+.pinit     0    00008000    00000000     UNINITIALIZED
+
+.bss       0    00000200    0000035a     UNINITIALIZED
+                  00000200    0000033e     life.obj (.bss)
+                  0000053e    0000000c     lifelib.obj (.bss)
+                  0000054a    00000006     RBX430_lcd.obj (.bss)
+                  00000550    00000004     rts430.lib : _lock.obj (.bss)
+                  00000554    00000004                : boot.obj (.bss)
+                  00000558    00000002     RBX430-1.obj (.bss)
+
+.data      0    00000200    00000000     UNINITIALIZED
+
+.stack     0    000005b0    00000050     UNINITIALIZED
+                  000005b0    00000002     rts430.lib : boot.obj (.stack)
+                  000005b2    0000004e     --HOLE--
+
+.const     0    00008000    000018e4     
+                  00008000    00000888     lifelib.obj (.const:life_image)
+                  00008888    0000072a     lifelib.obj (.const:.string:jon_arbuckle)
+                  00008fb2    000001e0     RBX430_lcd.obj (.const:cs)
+                  00009192    00000125     lifelib.obj (.const:.string:beacon_maker)
+                  000092b7    00000001     --HOLE-- [fill = 0]
+                  000092b8    00000102     rts430.lib : ctype.obj (.const:.string:_ctypes_)
+                  000093ba    000000a2     RBX430_lcd.obj (.const:.string:dv3)
+                  0000945c    0000009a     lifelib.obj (.const:.string:pulsar)
+                  000094f6    00000081     lifelib.obj (.const:.string:gosper_glider_gun)
+                  00009577    00000001     --HOLE-- [fill = 0]
+                  00009578    0000006a     lifelib.obj (.const:.string:bird)
+                  000095e2    0000004f     lifelib.obj (.const:.string:loafer)
+                  00009631    00000001     --HOLE-- [fill = 0]
+                  00009632    0000003e     lifelib.obj (.const:.string:hexapole)
+                  00009670    0000003a     lifelib.obj (.const:.string:by_flop)
+                  000096aa    00000034     lifelib.obj (.const:.string:hwss)
+                  000096de    0000002f     lifelib.obj (.const:.string:loaf)
+                  0000970d    00000001     --HOLE-- [fill = 0]
+                  0000970e    0000002f     lifelib.obj (.const:.string:lwss)
+                  0000973d    00000001     --HOLE-- [fill = 0]
+                  0000973e    0000002c     lifelib.obj (.const:.string)
+                  0000976a    0000002c     RBX430_lcd.obj (.const:dv$3)
+                  00009796    0000002b     lifelib.obj (.const:.string:beacon)
+                  000097c1    00000001     --HOLE-- [fill = 0]
+                  000097c2    0000002a     lifelib.obj (.const:.string:beehive)
+                  000097ec    00000027     lifelib.obj (.const:.string:boat)
+                  00009813    00000001     --HOLE-- [fill = 0]
+                  00009814    00000027     lifelib.obj (.const:.string:glider)
+                  0000983b    00000001     --HOLE-- [fill = 0]
+                  0000983c    00000024     lifelib.obj (.const:.string:toad)
+                  00009860    00000023     lifelib.obj (.const:.string:block)
+                  00009883    00000001     --HOLE-- [fill = 0]
+                  00009884    00000020     lifelib.obj (.const:.string:blinker)
+                  000098a4    00000011     RBX430_lcd.obj (.const:.string:lHexChar$1)
+                  000098b5    00000001     --HOLE-- [fill = 0]
+                  000098b6    00000011     RBX430_lcd.obj (.const:.string:uHexChar$2)
+                  000098c7    00000001     --HOLE-- [fill = 0]
+                  000098c8    00000010     life.obj (.const:.string)
+                  000098d8    00000006     RBX430_lcd.obj (.const:px_off)
+                  000098de    00000006     RBX430_lcd.obj (.const:px_on)
+
+.text      0    000098e4    000015ca     
+                  000098e4    000002d4     life.obj (.text:main)
+                  00009bb8    00000246     RBX430_lcd.obj (.text:lcd_point)
+                  00009dfe    00000244     RBX430_lcd.obj (.text:my_printfi)
+                  0000a042    00000222     lifelib.obj (.text:init_life)
+                  0000a264    00000186     RBX430_lcd.obj (.text:lcd_init)
+                  0000a3ea    00000132     lifelib.obj (.text:display_results)
+                  0000a51c    00000132     RBX430_lcd.obj (.text:lcd_putchar)
+                  0000a64e    00000112     life.obj (.text:draw_rle_pattern)
+                  0000a760    000000d4     RBX430_lcd.obj (.text:lcd_wordImage)
+                  0000a834    000000be     RBX430-1.obj (.text:RBX430_init)
+                  0000a8f2    00000088     RBX430_lcd.obj (.text:lcd_rectangle)
+                  0000a97a    00000076     RBX430-1.obj (.text:ERROR2)
+                  0000a9f0    0000005e     RBX430_lcd.obj (.text:lcd_WD)
+                  0000aa4e    0000004c     rts430.lib : lsr16.obj (.text)
+                  0000aa9a    0000004a     RBX430_lcd.obj (.text:lcd_WD2)
+                  0000aae4    00000046     RBX430_lcd.obj (.text:DelayMs)
+                  0000ab2a    00000042     lifelib.obj (.text:WDT_ISR)
+                  0000ab6c    00000038     RBX430_lcd.obj (.text:ReadDataWord)
+                  0000aba4    00000034     RBX430_lcd.obj (.text:WriteDataWord)
+                  0000abd8    00000034     RBX430_lcd.obj (.text:lcd_set_x_y)
+                  0000ac0c    00000034     lifelib.obj (.text:port1_init)
+                  0000ac40    00000030     RBX430_lcd.obj (.text:lcd_cursor)
+                  0000ac70    0000002e     RBX430_lcd.obj (.text:lcd_set)
+                  0000ac9e    0000002c     rts430.lib : asr16.obj (.text)
+                  0000acca    0000002c                : lsl16.obj (.text)
+                  0000acf6    00000024     RBX430_lcd.obj (.text:lcd_printf)
+                  0000ad1a    00000022     lifelib.obj (.text:ISR_trap)
+                  0000ad3c    00000020     RBX430_lcd.obj (.text:ReadData)
+                  0000ad5c    0000001e     RBX430_lcd.obj (.text:WriteCmd)
+                  0000ad7a    0000001e     RBX430_lcd.obj (.text:WriteData)
+                  0000ad98    0000001e     rts430.lib : boot.obj (.text:_c_int00_noinit_noexit)
+                  0000adb6    0000001e     RBX430_lcd.obj (.text:lcd_mode)
+                  0000add4    00000016     rts430.lib : div16u.obj (.text)
+                  0000adea    00000016     lifelib.obj (.text:watchdog_init)
+                  0000ae00    00000014     RBX430_lcd.obj (.text:lcd_backlight)
+                  0000ae14    00000014     rts430.lib : memset.obj (.text:memset)
+                  0000ae28    00000014                : mult16.obj (.text)
+                  0000ae3c    00000012                : lsr32.obj (.text:l_lsr)
+                  0000ae4e    00000012                : memcpy.obj (.text:memcpy)
+                  0000ae60    00000010                : epilog.obj (.text)
+                  0000ae70    0000000e                : strlen.obj (.text:strlen)
+                  0000ae7e    0000000c     lifelib.obj (.text:Port_1_ISR)
+                  0000ae8a    0000000a     RBX430_lcd.obj (.text:lcd_clear)
+                  0000ae94    00000008     RBX430-1.obj (.text:ADC10_ISR)
+                  0000ae9c    00000008     rts430.lib : isdigit.obj (.text:isdigit)
+                  0000aea4    00000004                : pre_init.obj (.text:_system_pre_init)
+                  0000aea8    00000004                : exit.obj (.text:abort)
+                  0000aeac    00000002                : _lock.obj (.text:_nop)
+
+PORT1      0    0000ffe4    00000002     
+                  0000ffe4    00000002     lifelib.obj (.int02)
+
+PORT2      0    0000ffe6    00000002     
+                  0000ffe6    00000002     lifelib.obj (.int03)
+
+ADC10      0    0000ffea    00000002     
+                  0000ffea    00000002     RBX430-1.obj (.int05)
+
+USCIAB0TX 
+*          0    0000ffec    00000002     
+                  0000ffec    00000002     lifelib.obj (.int06)
+
+USCIAB0RX 
+*          0    0000ffee    00000002     
+                  0000ffee    00000002     lifelib.obj (.int07)
+
+TIMERA1    0    0000fff0    00000002     
+                  0000fff0    00000002     lifelib.obj (.int08)
+
+TIMERA0    0    0000fff2    00000002     
+                  0000fff2    00000002     lifelib.obj (.int09)
+
+WDT        0    0000fff4    00000002     
+                  0000fff4    00000002     lifelib.obj (.int10)
+
+TIMERB1    0    0000fff8    00000002     
+                  0000fff8    00000002     lifelib.obj (.int12)
+
+TIMERB0    0    0000fffa    00000002     
+                  0000fffa    00000002     lifelib.obj (.int13)
+
+NMI        0    0000fffc    00000002     
+                  0000fffc    00000002     lifelib.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430.lib : boot.obj (.reset)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000200   .bss
+00000200   .data
+000098e4   .text
+0000004a   ADC10AE0
+0000004b   ADC10AE1
+000001b0   ADC10CTL0
+000001b2   ADC10CTL1
+00000048   ADC10DTC0
+00000049   ADC10DTC1
+000001b4   ADC10MEM
+000001bc   ADC10SA
+0000ae94   ADC10_ISR
+00000057   BCSCTL1
+00000058   BCSCTL2
+00000053   BCSCTL3
+0000aea8   C$$EXIT
+000010fb   CALBC1_12MHZ
+000010f9   CALBC1_16MHZ
+000010ff   CALBC1_1MHZ
+000010fd   CALBC1_8MHZ
+000010fa   CALDCO_12MHZ
+000010f8   CALDCO_16MHZ
+000010fe   CALDCO_1MHZ
+000010fc   CALDCO_8MHZ
+00000056   DCOCTL
+0000a97a   ERROR2
+00000128   FCTL1
+0000012a   FCTL2
+0000012c   FCTL3
+00000000   IE1
+00000001   IE2
+00000002   IFG1
+00000003   IFG2
+0000ad1a   ISR_trap
+0000ac9e   I_ASR
+0000acc6   I_ASR_1
+0000acb4   I_ASR_10
+0000acb2   I_ASR_11
+0000acb0   I_ASR_12
+0000acae   I_ASR_13
+0000acac   I_ASR_14
+0000acaa   I_ASR_15
+0000acc4   I_ASR_2
+0000acc2   I_ASR_3
+0000acc0   I_ASR_4
+0000acbe   I_ASR_5
+0000acbc   I_ASR_6
+0000acba   I_ASR_7
+0000acb8   I_ASR_8
+0000acb6   I_ASR_9
+0000acca   I_LSL
+0000acf2   I_LSL_1
+0000ace0   I_LSL_10
+0000acde   I_LSL_11
+0000acdc   I_LSL_12
+0000acda   I_LSL_13
+0000acd8   I_LSL_14
+0000acd6   I_LSL_15
+0000acf0   I_LSL_2
+0000acee   I_LSL_3
+0000acec   I_LSL_4
+0000acea   I_LSL_5
+0000ace8   I_LSL_6
+0000ace6   I_LSL_7
+0000ace4   I_LSL_8
+0000ace2   I_LSL_9
+0000aa4e   I_LSR
+0000aa94   I_LSR_1
+0000aa70   I_LSR_10
+0000aa6c   I_LSR_11
+0000aa68   I_LSR_12
+0000aa64   I_LSR_13
+0000aa60   I_LSR_14
+0000aa5c   I_LSR_15
+0000aa90   I_LSR_2
+0000aa8c   I_LSR_3
+0000aa88   I_LSR_4
+0000aa84   I_LSR_5
+0000aa80   I_LSR_6
+0000aa7c   I_LSR_7
+0000aa78   I_LSR_8
+0000aa74   I_LSR_9
+0000ae3c   L_LSR
+000000c0   OA0CTL0
+000000c1   OA0CTL1
+000000c2   OA1CTL0
+000000c3   OA1CTL1
+00000022   P1DIR
+00000025   P1IE
+00000024   P1IES
+00000023   P1IFG
+00000020   P1IN
+00000021   P1OUT
+00000027   P1REN
+00000026   P1SEL
+0000002a   P2DIR
+0000002d   P2IE
+0000002c   P2IES
+0000002b   P2IFG
+00000028   P2IN
+00000029   P2OUT
+0000002f   P2REN
+0000002e   P2SEL
+0000001a   P3DIR
+00000018   P3IN
+00000019   P3OUT
+00000010   P3REN
+0000001b   P3SEL
+0000001e   P4DIR
+0000001c   P4IN
+0000001d   P4OUT
+00000011   P4REN
+0000001f   P4SEL
+0000ae7e   Port_1_ISR
+0000a834   RBX430_init
+00000172   TACCR0
+00000174   TACCR1
+00000176   TACCR2
+00000162   TACCTL0
+00000164   TACCTL1
+00000166   TACCTL2
+00000160   TACTL
+0000012e   TAIV
+00000170   TAR
+00000192   TBCCR0
+00000194   TBCCR1
+00000196   TBCCR2
+00000182   TBCCTL0
+00000184   TBCCTL1
+00000186   TBCCTL2
+00000180   TBCTL
+0000011e   TBIV
+00000190   TBR
+0000005d   UCA0ABCTL
+00000062   UCA0BR0
+00000063   UCA0BR1
+00000060   UCA0CTL0
+00000061   UCA0CTL1
+0000005f   UCA0IRRCTL
+0000005e   UCA0IRTCTL
+00000064   UCA0MCTL
+00000066   UCA0RXBUF
+00000065   UCA0STAT
+00000067   UCA0TXBUF
+0000006a   UCB0BR0
+0000006b   UCB0BR1
+00000068   UCB0CTL0
+00000069   UCB0CTL1
+0000006c   UCB0I2CIE
+00000118   UCB0I2COA
+0000011a   UCB0I2CSA
+0000006e   UCB0RXBUF
+0000006d   UCB0STAT
+0000006f   UCB0TXBUF
+00000120   WDTCTL
+0000ab2a   WDT_ISR
+00000600   __STACK_END
+00000050   __STACK_SIZE
+00000001   __TI_args_main
+00000001   __TI_auto_init
+00000554   __TI_cleanup_ptr
+00000556   __TI_dtors_ptr
+00000001   __TI_exit
+0000ffe4   __TI_int02
+0000ffe6   __TI_int03
+0000ffea   __TI_int05
+0000ffec   __TI_int06
+0000ffee   __TI_int07
+0000fff0   __TI_int08
+0000fff2   __TI_int09
+0000fff4   __TI_int10
+0000fff8   __TI_int12
+0000fffa   __TI_int13
+0000fffc   __TI_int14
+ffffffff   __binit__
+00000200   __bss__
+ffffffff   __c_args__
+ffffffff   __cinit__
+00000200   __data__
+0000add4   __divu
+00000200   __edata__
+0000055a   __end__
+0000aeae   __etext__
+0000ae28   __mpyi
+ffffffff   __pinit__
+0000add4   __remu
+000098e4   __text__
+0000ad98   _c_int00
+0000ad98   _c_int00_noinit_noexit
+000092b8   _ctypes_
+00000550   _lock
+0000aeac   _nop
+0000fffe   _reset_vector
+000005b0   _stack
+0000aea4   _system_pre_init
+00000552   _unlock
+0000aea8   abort
+00009796   beacon
+00009192   beacon_maker
+000097c2   beehive
+ffffffff   binit
+00009578   bird
+00009884   blinker
+00009860   block
+000097ec   boat
+00009670   by_flop
+ffffffff   cinit
+00008fb2   cs
+0000a3ea   display_results
+0000a64e   draw_rle_pattern
+000093ba   dv3
+00000200   edata
+0000055a   end
+0000aeae   etext
+0000ae6c   func_epilog_1
+0000ae6a   func_epilog_2
+0000ae68   func_epilog_3
+0000ae66   func_epilog_4
+0000ae64   func_epilog_5
+0000ae62   func_epilog_6
+0000ae60   func_epilog_7
+00009814   glider
+000094f6   gosper_glider_gun
+00009632   hexapole
+000096aa   hwss
+00000558   i2c_fSCL
+0000a042   init_life
+0000ae9c   isdigit
+00008888   jon_arbuckle
+0000a9f0   lcd_WD
+0000aa9a   lcd_WD2
+0000ae00   lcd_backlight
+0000ae8a   lcd_clear
+0000ac40   lcd_cursor
+0000a264   lcd_init
+0000adb6   lcd_mode
+00009bb8   lcd_point
+0000acf6   lcd_printf
+0000a51c   lcd_putchar
+0000a8f2   lcd_rectangle
+0000ac70   lcd_set
+0000abd8   lcd_set_x_y
+0000a760   lcd_wordImage
+00000200   life
+0000052a   life_cr
+00008000   life_image
+00000534   life_nr
+00000520   life_pr
+000096de   loaf
+000095e2   loafer
+0000970e   lwss
+000098e4   main
+0000ae4e   memcpy
+0000ae14   memset
+ffffffff   pinit
+0000ac0c   port1_init
+0000945c   pulsar
+000098d8   px_off
+000098de   px_on
+0000053e   seconds
+0000ae70   strlen
+00000540   switches
+0000983c   toad
+0000adea   watchdog_init
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   IE1
+00000001   IE2
+00000001   __TI_args_main
+00000001   __TI_auto_init
+00000001   __TI_exit
+00000002   IFG1
+00000003   IFG2
+00000010   P3REN
+00000011   P4REN
+00000018   P3IN
+00000019   P3OUT
+0000001a   P3DIR
+0000001b   P3SEL
+0000001c   P4IN
+0000001d   P4OUT
+0000001e   P4DIR
+0000001f   P4SEL
+00000020   P1IN
+00000021   P1OUT
+00000022   P1DIR
+00000023   P1IFG
+00000024   P1IES
+00000025   P1IE
+00000026   P1SEL
+00000027   P1REN
+00000028   P2IN
+00000029   P2OUT
+0000002a   P2DIR
+0000002b   P2IFG
+0000002c   P2IES
+0000002d   P2IE
+0000002e   P2SEL
+0000002f   P2REN
+00000048   ADC10DTC0
+00000049   ADC10DTC1
+0000004a   ADC10AE0
+0000004b   ADC10AE1
+00000050   __STACK_SIZE
+00000053   BCSCTL3
+00000056   DCOCTL
+00000057   BCSCTL1
+00000058   BCSCTL2
+0000005d   UCA0ABCTL
+0000005e   UCA0IRTCTL
+0000005f   UCA0IRRCTL
+00000060   UCA0CTL0
+00000061   UCA0CTL1
+00000062   UCA0BR0
+00000063   UCA0BR1
+00000064   UCA0MCTL
+00000065   UCA0STAT
+00000066   UCA0RXBUF
+00000067   UCA0TXBUF
+00000068   UCB0CTL0
+00000069   UCB0CTL1
+0000006a   UCB0BR0
+0000006b   UCB0BR1
+0000006c   UCB0I2CIE
+0000006d   UCB0STAT
+0000006e   UCB0RXBUF
+0000006f   UCB0TXBUF
+000000c0   OA0CTL0
+000000c1   OA0CTL1
+000000c2   OA1CTL0
+000000c3   OA1CTL1
+00000118   UCB0I2COA
+0000011a   UCB0I2CSA
+0000011e   TBIV
+00000120   WDTCTL
+00000128   FCTL1
+0000012a   FCTL2
+0000012c   FCTL3
+0000012e   TAIV
+00000160   TACTL
+00000162   TACCTL0
+00000164   TACCTL1
+00000166   TACCTL2
+00000170   TAR
+00000172   TACCR0
+00000174   TACCR1
+00000176   TACCR2
+00000180   TBCTL
+00000182   TBCCTL0
+00000184   TBCCTL1
+00000186   TBCCTL2
+00000190   TBR
+00000192   TBCCR0
+00000194   TBCCR1
+00000196   TBCCR2
+000001b0   ADC10CTL0
+000001b2   ADC10CTL1
+000001b4   ADC10MEM
+000001bc   ADC10SA
+00000200   .bss
+00000200   .data
+00000200   __bss__
+00000200   __data__
+00000200   __edata__
+00000200   edata
+00000200   life
+00000520   life_pr
+0000052a   life_cr
+00000534   life_nr
+0000053e   seconds
+00000540   switches
+00000550   _lock
+00000552   _unlock
+00000554   __TI_cleanup_ptr
+00000556   __TI_dtors_ptr
+00000558   i2c_fSCL
+0000055a   __end__
+0000055a   end
+000005b0   _stack
+00000600   __STACK_END
+000010f8   CALDCO_16MHZ
+000010f9   CALBC1_16MHZ
+000010fa   CALDCO_12MHZ
+000010fb   CALBC1_12MHZ
+000010fc   CALDCO_8MHZ
+000010fd   CALBC1_8MHZ
+000010fe   CALDCO_1MHZ
+000010ff   CALBC1_1MHZ
+00008000   life_image
+00008888   jon_arbuckle
+00008fb2   cs
+00009192   beacon_maker
+000092b8   _ctypes_
+000093ba   dv3
+0000945c   pulsar
+000094f6   gosper_glider_gun
+00009578   bird
+000095e2   loafer
+00009632   hexapole
+00009670   by_flop
+000096aa   hwss
+000096de   loaf
+0000970e   lwss
+00009796   beacon
+000097c2   beehive
+000097ec   boat
+00009814   glider
+0000983c   toad
+00009860   block
+00009884   blinker
+000098d8   px_off
+000098de   px_on
+000098e4   .text
+000098e4   __text__
+000098e4   main
+00009bb8   lcd_point
+0000a042   init_life
+0000a264   lcd_init
+0000a3ea   display_results
+0000a51c   lcd_putchar
+0000a64e   draw_rle_pattern
+0000a760   lcd_wordImage
+0000a834   RBX430_init
+0000a8f2   lcd_rectangle
+0000a97a   ERROR2
+0000a9f0   lcd_WD
+0000aa4e   I_LSR
+0000aa5c   I_LSR_15
+0000aa60   I_LSR_14
+0000aa64   I_LSR_13
+0000aa68   I_LSR_12
+0000aa6c   I_LSR_11
+0000aa70   I_LSR_10
+0000aa74   I_LSR_9
+0000aa78   I_LSR_8
+0000aa7c   I_LSR_7
+0000aa80   I_LSR_6
+0000aa84   I_LSR_5
+0000aa88   I_LSR_4
+0000aa8c   I_LSR_3
+0000aa90   I_LSR_2
+0000aa94   I_LSR_1
+0000aa9a   lcd_WD2
+0000ab2a   WDT_ISR
+0000abd8   lcd_set_x_y
+0000ac0c   port1_init
+0000ac40   lcd_cursor
+0000ac70   lcd_set
+0000ac9e   I_ASR
+0000acaa   I_ASR_15
+0000acac   I_ASR_14
+0000acae   I_ASR_13
+0000acb0   I_ASR_12
+0000acb2   I_ASR_11
+0000acb4   I_ASR_10
+0000acb6   I_ASR_9
+0000acb8   I_ASR_8
+0000acba   I_ASR_7
+0000acbc   I_ASR_6
+0000acbe   I_ASR_5
+0000acc0   I_ASR_4
+0000acc2   I_ASR_3
+0000acc4   I_ASR_2
+0000acc6   I_ASR_1
+0000acca   I_LSL
+0000acd6   I_LSL_15
+0000acd8   I_LSL_14
+0000acda   I_LSL_13
+0000acdc   I_LSL_12
+0000acde   I_LSL_11
+0000ace0   I_LSL_10
+0000ace2   I_LSL_9
+0000ace4   I_LSL_8
+0000ace6   I_LSL_7
+0000ace8   I_LSL_6
+0000acea   I_LSL_5
+0000acec   I_LSL_4
+0000acee   I_LSL_3
+0000acf0   I_LSL_2
+0000acf2   I_LSL_1
+0000acf6   lcd_printf
+0000ad1a   ISR_trap
+0000ad98   _c_int00
+0000ad98   _c_int00_noinit_noexit
+0000adb6   lcd_mode
+0000add4   __divu
+0000add4   __remu
+0000adea   watchdog_init
+0000ae00   lcd_backlight
+0000ae14   memset
+0000ae28   __mpyi
+0000ae3c   L_LSR
+0000ae4e   memcpy
+0000ae60   func_epilog_7
+0000ae62   func_epilog_6
+0000ae64   func_epilog_5
+0000ae66   func_epilog_4
+0000ae68   func_epilog_3
+0000ae6a   func_epilog_2
+0000ae6c   func_epilog_1
+0000ae70   strlen
+0000ae7e   Port_1_ISR
+0000ae8a   lcd_clear
+0000ae94   ADC10_ISR
+0000ae9c   isdigit
+0000aea4   _system_pre_init
+0000aea8   C$$EXIT
+0000aea8   abort
+0000aeac   _nop
+0000aeae   __etext__
+0000aeae   etext
+0000ffe4   __TI_int02
+0000ffe6   __TI_int03
+0000ffea   __TI_int05
+0000ffec   __TI_int06
+0000ffee   __TI_int07
+0000fff0   __TI_int08
+0000fff2   __TI_int09
+0000fff4   __TI_int10
+0000fff8   __TI_int12
+0000fffa   __TI_int13
+0000fffc   __TI_int14
+0000fffe   _reset_vector
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   __cinit__
+ffffffff   __pinit__
+ffffffff   binit
+ffffffff   cinit
+ffffffff   pinit
+
+[264 symbols]
